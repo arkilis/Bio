@@ -1,5 +1,10 @@
 #!/usr/bin/perl
 
+
+# obtained from Internet
+# Used to convert qual and related fasta file to a fastq file
+# 
+
 use warnings;
 use strict;
 use File::Basename;
