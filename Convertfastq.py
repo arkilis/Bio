@@ -2,6 +2,9 @@ from Bio import SeqIO
 import os
 import sys
 
+# convert a fastq file to responding fasta and qual files
+# Ben liu @ AGRF 
+# JAN 2014
 if(__name__=="__main__"):
     if(len(sys.argv)!=2):
         print "Invalid arguments!"
