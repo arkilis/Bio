@@ -1,20 +1,28 @@
+*Ben*: Hi everyone, my name is Ben and welcome to my bio script collection (Limited Edition)
+
+*everyone else*: Hi Ben.
+
 # Bio
 Commonly used scrips
 
 #### Index 
 
-1. ConvertFasta.pl
+* ConvertFasta.pl
 
 Convert qual and correponding fasta file to one fastq file
 
 
-2. Convertfastq.py
+* Convertfastq.py
 
 Fastq => Fasta + qual
 
-3. PharseFastaWithPHP.php
+* PharseFastaWithPHP.php
 
 PHP script used to pharse fasta file
+
+* PharseFastaWithPHP.php
+
+
 
 
 
