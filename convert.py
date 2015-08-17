@@ -1,4 +1,6 @@
-# convert 
+# convert A <=> T, C <=> G
+# 
+# 2013 @ AGRF
 
 def convert(seq):
     sz=""
@@ -15,10 +17,13 @@ def convert(seq):
         return sz
 
 
-sz="TGGCTAACAAGTCAGCAGAGG"
-# show original
-print sz
-# show complimentary
-print convert(sz)
-# show complimentary reverse
-print convert(sz)[::-1]
+def rev(seq):
+    return seq[::-1]
+
+
+def comp(seq):
+    return convert(seq)
+
+
+def revComp(seq):
+    return convert(seq[::-1])
