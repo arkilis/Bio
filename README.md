@@ -48,3 +48,15 @@ used to send email to any address. e.g. python2.7 send_email.py xxx@xxx.xxx
 **q2a.pl**
 
 Another script used to convert fastq to fasta
+
+**singleline.pl**
+
+Change multiline fasta to single line fasta
+
+**mergeline.py**
+
+Python version of merging multiline into one line
+
+**ace2fasta.pl**
+
+Convert ace file to fasta file
