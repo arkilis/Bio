@@ -60,3 +60,15 @@ Python version of merging multiline into one line
 **ace2fasta.pl**
 
 Convert ace file to fasta file
+
+**HMM Hidden Markov Model used to comapre seq**
+
+HMM template
+
+**HMM Hidden Markov Model used to comapre seq**
+
+Primer3 source code
+
+
+
+
