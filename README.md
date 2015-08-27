@@ -69,6 +69,11 @@ HMM template
 
 Primer3 source code
 
+**PEAR: an illumina paired read merging tool ()**
+Useful when the target is smaller than the 2x read length
+
+Link: http://sco.h-its.org/exelixis/web/software/pear/
+
 
 
 
