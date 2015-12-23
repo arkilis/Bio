@@ -1,6 +1,6 @@
 **Ben**: Hi everyone, my name is Ben and welcome to my bio script collection (Limited Edition)
 
-**everyone else**: Hi Ben.
+**Everyone **: Hi Ben.
 
 # Bio
 Commonly used scrips
