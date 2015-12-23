@@ -1,4 +1,5 @@
 #!/usr/bin/python
+from pprint import pprint
 
 # parse text to fasta objects and store in hash table
 class Seq(object):
@@ -22,6 +23,12 @@ class SeqRecord(object):
             r = self.records[self.key]
             return ">%s\n%s" % (r['description'],r['sequence'])
 
+    def desOutput(self):
+            return "%s" % self.records[self.key]['description']
+
+
+    def seqOutput(self):
+            return "%s" % self.records[self.key]['sequence']
 
 class FastaParser(object):
     def __init__(self,fasta_file):
@@ -55,3 +62,53 @@ class FastaParser(object):
 
     def __getitem__(self,key):
         return SeqRecord(key,self.records)
+
+
+
+qv      = 30
+path    = "/home/liub/data/11623/sent_to_client/trimmed_"
+
+def execute(fa, qual, name):
+    for k1,k2 in zip(fa.keys(), qual.keys()):
+        seqRes  = []
+        qulRes  = []
+
+        szQual  = qual[k2].seqOutput().replace("\r\n","")
+        aryQual = szQual.split(" ")
+        index   = 0
+        for q in aryQual:
+            if(int(q)>=qv):
+                seqRes.append(fa[k1].seqOutput()[index])
+                qulRes.append(aryQual[index])
+            index+=1
+
+        # create fasta file
+        with open(path+name+"/"+fa[k1].desOutput()[:20]+"_trimmed.fasta", 'wb') as fp:
+            fp.write(">"+fa[k1].desOutput()[:20]+"\n")
+            fp.write("".join(seqRes))
+            fp.close()
+
+        with open(path+name+"/"+fa[k1].desOutput()[:20]+"_trimmed.qual", 'wb') as fp:
+            fp.write(">"+fa[k1].desOutput()[:20]+"\n")
+            fp.write(" ".join(qulRes))
+            fp.close()
+
+if(__name__=="__main__"):
+
+
+
+    name    = [
+               "tr12_ak2",
+               "tr12_bi2",
+               "tr12_cf7",
+               "tr12_ch2",
+               "tr12_cj4",
+               "tr12_cn3",
+                ]
+
+
+
+    for n in name:
+        fa      = FastaParser(path+n+"/"+n+"_manual.fasta")
+        qual    = FastaParser(path+n+"/"+n+"_manual.qual")
+        execute(fa, qual, n)
